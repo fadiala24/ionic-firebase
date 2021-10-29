@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>reinitialise</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+  <ion-card-content>
+    <form #pass="ngForm" (ngSubmit)="updatePass(pass)">
+    <ion-item lines="full">
+      <ion-label position="floating">Ancien Mot de Passe</ion-label>
+      <ion-input type="password" name="old_pass" ngModel required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Nouveau Mot de Passe</ion-label>
+      <ion-input type="password" name="new_pass" ngModel required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Confirmer Mot de Passe</ion-label>
+      <ion-input type="password" name="conf_new" ngModel required></ion-input>
+    </ion-item>
+    <ion-button color="success" size="full" expan="block" type="submit">Réinitialiser</ion-button>
+  </form>
+  </ion-card-content>
+</ion-card>
+</ion-content>

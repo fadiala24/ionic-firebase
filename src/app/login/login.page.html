@@ -1,0 +1,28 @@
+
+<ion-content >
+  <form #data="ngForm" (ngSubmit)=login(data)>
+  <div class="flex-center">
+   <ion-card>
+     <ion-card-header>
+       <ion-card-title color="success">Connexion</ion-card-title>
+     </ion-card-header>
+
+     <ion-card-content>
+       <ion-item lines="full">
+         <ion-label position="floating">Email</ion-label>
+         <ion-input type="email" name="email" [(ngModel)]="email" required></ion-input>
+       </ion-item>
+   
+       <ion-item lines="full">
+         <ion-label position="floating">Password</ion-label>
+         <ion-input type="password" name="password" [(ngModel)]="password" required></ion-input>
+       </ion-item>
+       <ion-button color="dark" fill="clear" size="full" [routerLink]="['/forgot']" >Mot de passe oublié?</ion-button>
+       <ion-button color="success" size="full" expan="block" type="submit">Connexion</ion-button>
+       <ion-button color="success" size="full" fill="clear" [routerLink]="['/registre']">Inscription</ion-button>
+
+ </ion-card-content>
+   </ion-card>
+   </div>
+  </form>
+</ion-content>

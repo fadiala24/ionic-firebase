@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>forgot</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="flex-center">
+  <ion-car>
+    <ion-card-content>
+  <ion-item lines="full">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" name="email" [(ngModel)]="email" required></ion-input>
+  </ion-item>
+</ion-card-content>
+</ion-car>
+<ion-button color="success" size="full" expan="block" type="submit" (click)="alert()">Envoyer</ion-button>
+
+</ion-content>

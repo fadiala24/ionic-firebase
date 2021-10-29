@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button>Back</ion-back-button>
+    </ion-buttons>
+   
+
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-header>
+  Informations Personnelles
+</ion-header>
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-card style="background-color:aqua;">
+    <ion-card-content>
+  <h2>Prenom: {{user.userPrenom}}</h2>
+  <h2>Nom: {{user.userName}} </h2>
+  <p>Telephone: {{user.userPhone}}</p>
+      <p>Email: {{user.userEmail}}</p>
+      <p> Password: {{user.userPassword}}</p>
+      <p> Date: {{user.createdAt | date}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-button color="success" size="full" fill="clear" [routerLink]="['/reinitialise']">Réinitialiser Mot de passe</ion-button>
+
+</ion-content>

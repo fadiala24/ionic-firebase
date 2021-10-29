@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>changePass</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #pass="ngForm" (ngSubmit)="updatePass(pass)">
+      <ion-item>
+        <ion-label>Ancien mot de passe</ion-label>
+        <ion-input type="password" required ngModel name="old_pass"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nouveau mot de passe</ion-label>
+        <ion-input type="password" required ngModel name="new_pass"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Confirmer Nouveau mot de passe</ion-label>
+        <ion-input type="password" required ngModel name="conf_new"></ion-input>
+      </ion-item>
+      <ion-button type="submit" >Confirmer</ion-button>
+    </form>
+</ion-content>

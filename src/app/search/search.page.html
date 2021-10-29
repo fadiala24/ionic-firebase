@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color=primary> 
+    <ion-back-button slot="end"></ion-back-button>
+    <ion-title>RECHERCHE</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]=search></ion-searchbar>
+    <ion-list >
+      <ion-item>
+      <ion-label color="primary">Prenom</ion-label>
+      <ion-label color="primary">nom</ion-label>
+      <ion-label color="primary">Email</ion-label>
+  </ion-item>
+  <ion-item *ngFor="let item of items |async |filter:search">
+      <ion-label>{{item.userPrenom}}</ion-label>
+      <ion-label>{{item.userNom}}</ion-label>
+      <ion-label>{{item.userEmail}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
